@@ -601,7 +601,7 @@ Record.prototype._applyChange = function (newData) {
     const oldValue = jsonPath.get(oldData, paths[i], false)
 
     if (newValue !== oldValue) {
-      this._eventEmitter.emit(paths[i], this.get(paths[i]))
+      this._eventEmitter.emit(paths[i], this.get(paths[i]), this.name)
     }
   }
 }
